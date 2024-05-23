@@ -7,5 +7,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <ion-item>
+    <ion-input label="CEP" labelPlacement="floating" placeholder="Entre com seu CEP"></ion-input>
+  </ion-item>
+  <ion-button color="success" expand="block">Consultar CEP</ion-button>
+  <ion-item>
+    <ion-textarea
+      placeholder=""
+      [autoGrow]="true"
+      [readonly]="true"
+      value=""
+    >
+    </ion-textarea>
+  </ion-item>
 </ion-content>
