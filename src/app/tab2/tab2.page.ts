@@ -9,6 +9,7 @@ import { CEPService } from '../services/cep.service';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(public cepService: CEPService) {}
 
+  
 }
