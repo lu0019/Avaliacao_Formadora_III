@@ -10,23 +10,5 @@
   <ion-item>
     <ion-input label="CEP" labelPlacement="floating" placeholder="Entre com seu CEP" [(ngModel)]="cep"></ion-input>
   </ion-item>
-  <ion-button color="success" expand="block">Consultar CEP</ion-button>
-  <ion-item>
-    <ion-textarea
-      placeholder=""
-      [autoGrow]="true"
-      [readonly]="true"
-      value="CEP: {{cep}}
-            Logradouro: {{logradouro}}
-            Complemento: {{complemento}}
-            Bairro: {{bairro}}
-            Localidade: {{localidade}}
-            UF: {{uf}}
-            IBGE: {{ibge}}
-            GIA: {{gia}}
-            DDD: {{ddd}}
-            Siafi: {{siafi}}"
-    >
-    </ion-textarea>
-  </ion-item>
+  <ion-button color="success" expand="block" (click)="botaoConsulta()">Consultar CEP</ion-button>
 </ion-content>
