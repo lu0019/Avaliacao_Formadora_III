@@ -36,9 +36,12 @@ export class Tab2Page {
           this.ddd = data.ddd;
           this.siafi = data.siafi;
         } else {
-          console.error("Desculpe, mas o CEP não foi encontrado.");
+          console.error('CEP não encontrado.');
         }
-      })
+      },
+      (error) => {
+        console.error('Erro ao buscar o CEP:', error);
+      });
     }
   }
 }
