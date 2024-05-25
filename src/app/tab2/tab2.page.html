@@ -10,23 +10,74 @@
   <ion-item>
     <ion-input label="CEP" labelPlacement="floating" placeholder="Entre com seu CEP" [(ngModel)]="cep"></ion-input>
   </ion-item>
-  <ion-button color="success" expand="block">Consultar CEP</ion-button>
-  <ion-item>
-    <ion-textarea
-      placeholder=""
-      [autoGrow]="true"
-      [readonly]="true"
-      value="CEP: {{cep}}
-            Logradouro: {{logradouro}}
-            Complemento: {{complemento}}
-            Bairro: {{bairro}}
-            Localidade: {{localidade}}
-            UF: {{uf}}
-            IBGE: {{ibge}}
-            GIA: {{gia}}
-            DDD: {{ddd}}
-            Siafi: {{siafi}}"
-    >
-    </ion-textarea>
-  </ion-item>
+  <ion-button color="success" expand="block" (click)="botaoConsulta()">Consultar CEP</ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-item>
+          <ion-input label="UF" value="{{uf}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="8">
+        <ion-item>
+          <ion-input label="Bairro" value="{{bairro}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-item>
+          <ion-input label="GIA" value="{{gia}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="8">
+        <ion-item>
+          <ion-input label="IBGE" value="{{ibge}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-item>
+          <ion-input label="DDD" value="{{ddd}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item>
+          <ion-input label="Siafi" value="{{siafi}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-input label="Logradouro" value="{{logradouro}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-input label="Complemento" value="{{complemento}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-input label="Localidade" value="{{localidade}}" [disabled]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
